@@ -1,3 +1,4 @@
+import AccessData from './components/AccessData';
 import './App.css';
 import contextUserData from './components/context';
 import PersonalData from './components/PersonalData';
@@ -12,12 +13,13 @@ function App() {
     password: "",
   }
   const userInfo = userInfoInitial;
-  // console.log('userInfo: ', userInfo);
+
 
   return (
-    <contextUserData.Provider value={{ userInfo }}>
-      <PersonalData />
-    </contextUserData.Provider>
+    /*     <contextUserData.Provider value={{ userInfo }}>
+          <PersonalData />
+        </contextUserData.Provider> */
+    <AccessData />
   );
 
 }
