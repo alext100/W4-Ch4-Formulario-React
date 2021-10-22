@@ -2,6 +2,7 @@ import AccessData from './components/AccessData';
 import './App.css';
 import contextUserData from './components/context';
 import PersonalData from './components/PersonalData';
+import Login from './components/Login';
 
 function App() {
   const userInfoInitial = {
@@ -16,10 +17,13 @@ function App() {
 
 
   return (
-    /*     <contextUserData.Provider value={{ userInfo }}>
-          <PersonalData />
-        </contextUserData.Provider> */
-    <AccessData />
+    <>
+      <contextUserData.Provider value={{ userInfo }}>
+        <PersonalData />
+        <AccessData />
+      </contextUserData.Provider>
+      <Login />
+    </>
   );
 
 }

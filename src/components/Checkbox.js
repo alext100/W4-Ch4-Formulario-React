@@ -1,9 +1,9 @@
 const Checkbox = () => {
   return (
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled />
-      <label class="form-check-label" for="disabledFieldsetCheck">
-        Can't check this
+    <div className="form-check">
+      <input className="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled />
+      <label className="form-check-label" htmlFor="disabledFieldsetCheck">
+        Remember password
       </label>
     </div>
   );
