@@ -15,7 +15,6 @@ function App() {
   }
   const userInfo = userInfoInitial;
 
-
   return (
     <>
       <contextUserData.Provider value={{ userInfo }}>
@@ -25,7 +24,6 @@ function App() {
       <Login />
     </>
   );
-
 }
 
 export default App;

@@ -1,6 +1,5 @@
 const Input = ({ placeholder, textContent, invalidFeedback, type = "text" }) => {
 
-
   return (
     <div className="col-md-4">
       <label htmlFor="validation" className="form-label">{textContent}</label>

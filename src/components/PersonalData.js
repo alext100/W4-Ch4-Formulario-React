@@ -6,8 +6,6 @@ import Button from "./Button"
 
 const PersonalData = () => {
   const { userInfo } = useContext(contextUserData);
-  console.log('userInfo: ', userInfo);
-
 
   return (
     <form className="row g-3 personal-data">
