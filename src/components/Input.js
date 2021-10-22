@@ -1,8 +1,10 @@
-const Input = () => {
+const Input = ({ placeholder, textContent, invalidFeedback, type = "text" }) => {
+
   return (
     <div className="col-md-4">
-      <label htmlFor="validationServer01" className="form-label">First name</label>
-      <input type="text" className="form-control is-valid" id="validationServer01" placeholder="name@example.com" defaultValue="" required />
+      <label htmlFor="validation" className="form-label">{textContent}</label>
+      <input type={type} className="form-control is-valid" id="validation" placeholder={placeholder} defaultValue="" required />
+      <div className="invalid-feedback">{invalidFeedback}</div>
     </div>
   );
 }

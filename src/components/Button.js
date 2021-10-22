@@ -1,7 +1,7 @@
-const Button = ({ buttonText }) => {
+const Button = ({ buttonText, className = "btn btn-primary" }) => {
   return (
     <div className="col-12">
-      <button className="btn btn-primary" type="submit">{buttonText}</button>
+      <button className={className} type="submit">{buttonText}</button>
     </div>
   );
 }
