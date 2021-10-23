@@ -1,11 +1,9 @@
 import "./PersonalData.css";
-import contextUserData from "./context";
-import { useContext } from "react";
 import Input from "./Input";
 import Button from "./Button"
 
 const PersonalData = () => {
-  const { userInfo } = useContext(contextUserData);
+  //const { userInfo } = useContext(contextUserData);
 
   return (
     <form className="row g-3 personal-data">
