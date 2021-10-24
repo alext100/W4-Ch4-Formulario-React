@@ -3,25 +3,28 @@ import './App.css';
 import contextUserData from './components/context';
 import PersonalData from './components/PersonalData';
 import Login from './components/Login';
+import { useState } from 'react';
 
 function App() {
-  const userInfoInitial = {
+  const [formStep, setFormStep] = useState(1);
+  const [userInfo, setUserInfo] = useState({
     name: "",
     lastName: "",
     birthday: "",
     email: "",
     userName: "",
     password: "",
-  }
-  const userInfo = userInfoInitial;
+  });
 
   return (
     <>
-      <contextUserData.Provider value={{ userInfo }}>
-        <PersonalData />
-        <AccessData />
+      <contextUserData.Provider value={{ formStep, setFormStep, setUserInfo, userInfo }}>
+        {{
+          1: <PersonalData />,
+          2: <AccessData />,
+          3: <Login />,
+        }[formStep]}
       </contextUserData.Provider>
-      <Login />
     </>
   );
 }
